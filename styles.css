@@ -1,0 +1,260 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'BIZ UDPMincho';
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFAFB;
+  color: #333;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  font-weight: 550;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.menu-item {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: inherit;
+  font-size: 13px;
+  text-transform: inherit;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.menu-item a:hover {
+  color: #D0C1C5;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+
+.profile-img {
+  margin-top: 20px;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 17 / 10;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+.welcome {
+  width: 20%;
+  margin-top: -40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+.second-img {
+  margin-top: -5px;
+  width: 30%;
+  max-width: 400px;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.flowerleft {
+  position: absolute;
+  text-align: left;
+  margin-left: -50%;
+  margin-top: -60%;
+  width: 150px;
+}
+
+.flowerright {
+  margin-right: -1219px;
+  margin-top: -55%;
+  overflow: hidden;
+  width: 300px;
+}
+ 
+.text {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 50%;
+  font-weight: 580;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.texttwo {
+  text-align: left;
+  margin-left: 16%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.LifeJourney {
+  width: 25%;
+  max-width: 500px;
+  height: auto;
+  margin-left: 40%;
+  margin-top: 7%;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.aboutmeimg {
+  display: block;
+  margin-left: auto;
+  margin-right: 47%;
+  margin-top: -44%;
+  width: 37%;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+.projectsword {
+  max-width: 100%;
+  margin-top: -10%;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+.LastUpdated {
+  max-width: 70%;
+  visibility: visible;
+  animation: fadeIn 1.5s ease-in-out forwards;
+
+}
+
+#about-me {
+  margin-top: -250px;
+}
+
+#projects {
+  margin-top: -2%;
+
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 50px;
+  font-family: 'BIZ UDPMincho', sans-serif;
+  margin-top: -4%;
+}
+
+.card {
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+
+.card h2 {
+  position: absolute;
+  inset: auto auto 30px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.3s ease-out;
+  font-family: 'BIZ UDPMincho', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.card p,
+.card a {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+}
+
+.card p {
+  inset: auto auto 80px 30px;
+}
+
+.card a {
+  inset: auto auto 40px 30px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover h2 {
+  inset: auto auto 220px 30px;
+  transition: inset 0.3s ease-out;
+}
+
+.card:hover p,
+.card:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+
+.fade-on-scroll {
+  visibility: hidden;
+}
+
+
+.animate {
+  visibility: visible;
+  animation: fadeIn 1s ease-in-out forwards;
+}
