@@ -70,10 +70,10 @@ body {
 
 
 .profile-img {
-  margin-top: 20px;
+  margin-top: 1%;
   border-radius: 100px;
-  width: 100%;
-  max-width: 600px;
+  width: 40%;
+  max-width: 60%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 17 / 10;
@@ -82,16 +82,16 @@ body {
 
 
 .welcome {
-  width: 20%;
-  margin-top: -40px;
+  width: 19%;
+  margin-top: -3%;
   animation: fadeIn 2s ease-in-out;
 }
 
 
 .second-img {
-  margin-top: -5px;
-  width: 30%;
-  max-width: 400px;
+  margin-top: 0%;
+  width: 22%;
+  /* max-width: 40%; */
   height: auto;
   animation: fadeIn 2s ease-in-out;
 }
@@ -101,14 +101,14 @@ body {
   text-align: left;
   margin-left: -50%;
   margin-top: -60%;
-  width: 150px;
+  width: 10%;
 }
 
 .flowerright {
-  margin-right: -1219px;
+  margin-right: -80%;
   margin-top: -55%;
   overflow: hidden;
-  width: 300px;
+  width: 20%;
 }
  
 .text {
@@ -127,7 +127,7 @@ body {
 
 .LifeJourney {
   width: 25%;
-  max-width: 500px;
+  /* max-width: 500px; */
   height: auto;
   margin-left: 40%;
   margin-top: 7%;
@@ -159,7 +159,7 @@ body {
 }
 
 #about-me {
-  margin-top: -250px;
+  margin-top: -18%;
 }
 
 #projects {
