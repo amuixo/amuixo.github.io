@@ -258,3 +258,9 @@ main {
   visibility: visible;
   animation: fadeIn 1s ease-in-out forwards;
 }
+
+.line{
+width: 56%;
+
+
+}
