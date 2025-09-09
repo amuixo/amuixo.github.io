@@ -63,7 +63,7 @@ body {
 
 .menu-item a:hover {
   color: #D0C1C5;
-  
+
 }
 
 .menu-item:hover {
@@ -114,7 +114,7 @@ body {
   overflow: hidden;
   width: 20%;
 }
- 
+
 .text {
   font-size: 20px;
   text-align: left;
@@ -130,7 +130,7 @@ body {
 }
 
 .LifeJourney {
-  width: 25%;   
+  width: 25%;
   height: auto;
   margin-left: 40%;
   margin-top: 3%;
@@ -160,7 +160,9 @@ body {
   animation: fadeIn 1.5s ease-in-out forwards;
 
 }
-/* 
+
+/*css for sections*/
+
 #about-me {
   margin-top: -18%;
 }
@@ -168,7 +170,9 @@ body {
 #projects {
   margin-top: -2%;
 
-} */
+}
+
+/* cards for projects*/
 
 main {
   display: flex;
@@ -192,6 +196,7 @@ main {
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* card image */
 .card img {
   position: absolute;
   object-fit: cover;
@@ -203,6 +208,7 @@ main {
   transition: opacity 0.2s ease-out;
 }
 
+/* card text */
 .card h2 {
   position: absolute;
   inset: auto auto 30px 30px;
@@ -213,24 +219,27 @@ main {
   text-transform: uppercase;
 }
 
-.card p,
-.card a {
+/* card with info */
+.card p {
+  inset: auto auto 80px 30px;
   position: absolute;
   opacity: 0;
   max-width: 80%;
   transition: opacity 0.3s ease-out;
 }
 
-.card p {
-  inset: auto auto 80px 30px;
-}
-
+/* learn more message */
 .card a {
   inset: auto auto 40px 30px;
   color: inherit;
   text-decoration: none;
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
 }
-
+ 
+/* hover effect of the title on the card */
 .card:hover h2 {
   inset: auto auto 220px 30px;
   transition: inset 0.3s ease-out;
@@ -242,17 +251,14 @@ main {
   transition: opacity 0.5s 0.1s ease-in;
 }
 
+/* makes the img less visible on hover */
 .card:hover img {
   transition: opacity 0.3s ease-in;
   opacity: 1;
 }
 
-.material-symbols-outlined {
-  vertical-align: middle;
-}
 
-
-.fade-on-scroll {
+/* .fade-on-scroll {
   visibility: hidden;
 }
 
@@ -260,10 +266,4 @@ main {
 .animate {
   visibility: visible;
   animation: fadeIn 1s ease-in-out forwards;
-}
-
-.line{
-width: 56%;
-
-
-}
+} */
