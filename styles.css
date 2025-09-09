@@ -258,11 +258,11 @@ main {
 }
 
 
+
+/* fade in on scroll animation */
 .fade-on-scroll {
   visibility: hidden;
 }
-
-
 .animate {
   visibility: visible;
   animation: fadeIn 0.8s ease-in-out forwards;
