@@ -17,6 +17,7 @@ body {
   animation: fadeIn 1.5s ease-in-out;
 }
 
+/* fade in and slide up animation x)*/
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -29,7 +30,7 @@ body {
   }
 }
 
-
+/* i have no idea why this menu works but im not touching it*/
 .menu {
   display: flex;
   justify-content: center;
@@ -62,11 +63,15 @@ body {
 
 .menu-item a:hover {
   color: #D0C1C5;
+  
 }
 
 .menu-item:hover {
   transform: scale(1.05);
 }
+
+
+
 
 
 .profile-img {
@@ -91,7 +96,6 @@ body {
 .second-img {
   margin-top: 0%;
   width: 22%;
-  /* max-width: 40%; */
   height: auto;
   animation: fadeIn 2s ease-in-out;
 }
@@ -126,8 +130,7 @@ body {
 }
 
 .LifeJourney {
-  width: 25%;
-  /* max-width: 500px; */
+  width: 25%;   
   height: auto;
   margin-left: 40%;
   margin-top: 3%;
@@ -157,7 +160,7 @@ body {
   animation: fadeIn 1.5s ease-in-out forwards;
 
 }
-
+/* 
 #about-me {
   margin-top: -18%;
 }
@@ -165,7 +168,7 @@ body {
 #projects {
   margin-top: -2%;
 
-}
+} */
 
 main {
   display: flex;

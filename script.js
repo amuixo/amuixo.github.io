@@ -1,13 +1,13 @@
-// Define the callback for Intersection Observer
+
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animate");
-      observer.unobserve(entry.target); // Stop observing after animation
+      observer.unobserve(entry.target); // stop observing/only do the animation once when its done
     }
   });
 }, {
-  threshold: 0.5 // Trigger when 50% of the element is in view
+  threshold: 0.3 // this triggers when you see the amount of the element like 30% asof right now.
 });
 
 // Target elements to observe
