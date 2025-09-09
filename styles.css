@@ -258,12 +258,12 @@ main {
 }
 
 
-/* .fade-on-scroll {
+.fade-on-scroll {
   visibility: hidden;
 }
 
 
 .animate {
   visibility: visible;
-  animation: fadeIn 1s ease-in-out forwards;
-} */
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
