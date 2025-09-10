@@ -106,15 +106,25 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-.kimidesign
-{
-  margin-top: 5%;
+.kimidesign,
+.kuboandkimi {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 450px;
-  height: 10%;
+  height: auto;
   animation: fadeIn 2s ease-in-out;
-  margin-left: 1000px;
 }
 
+.kimidesign {
+  margin-top: 20%;
+  margin-left: 1200px;
+}
+
+.kuboandkimi {
+  margin-top: 1%;
+  margin-left: 1000px;
+}
 
 /* fade in on scroll animation */
 .fade-on-scroll {
