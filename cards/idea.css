@@ -98,15 +98,21 @@ body {
 
 }
 
-/*css for sections*/
+.allprojects {
 
-#about-me {
-  margin-top: -18%;
+  margin-top: 5%;
+  width: 350px;
+  height: 10%;
+  animation: fadeIn 2s ease-in-out;
 }
 
-#projects {
-  margin-top: -2%;
-
+.kimidesign
+{
+  margin-top: 5%;
+  width: 450px;
+  height: 10%;
+  animation: fadeIn 2s ease-in-out;
+  margin-left: 1000px;
 }
 
 
@@ -118,7 +124,5 @@ body {
   visibility: visible;
   animation: fadeIn 0.8s ease-in-out forwards;
 }
-
-
 
 
