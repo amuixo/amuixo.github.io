@@ -1,4 +1,3 @@
-
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -10,7 +9,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   threshold: 0.3 // this triggers when you see the amount of the element like 30% asof right now.
 });
 
-// Target elements to observe
+// target elements to observe
 const targets = document.querySelectorAll(".fade-on-scroll");
 targets.forEach(target => {
   observer.observe(target);
