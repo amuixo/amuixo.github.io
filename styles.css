@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+/* design tokens */
+--text: #ffffff;
+}
 
 body {
   font-family: 'BIZ UDPMincho';
@@ -16,6 +20,7 @@ body {
   font-weight: 550;
   animation: fadeIn 1.5s ease-in-out;
 }
+
 
 /* fade in and slide up animation x)*/
 @keyframes fadeIn {
@@ -196,6 +201,7 @@ main {
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 /* card image */
 .card img {
   position: absolute;
@@ -217,6 +223,7 @@ main {
   font-family: 'BIZ UDPMincho', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+  color: var(--text);
 }
 
 /* card with info */
@@ -226,6 +233,9 @@ main {
   opacity: 0;
   max-width: 80%;
   transition: opacity 0.3s ease-out;
+    color: var(--text);
+    text-align: left;
+
 }
 
 /* learn more message */
@@ -257,7 +267,16 @@ main {
   opacity: 1;
 }
 
-
+/* Make the whole card clickable and remove link styles */
+.card-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+.card-link:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  transform: scale(1.03);
+}
 
 /* fade in on scroll animation */
 .fade-on-scroll {
