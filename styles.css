@@ -12,7 +12,7 @@ body {
   font-size: 19px;
   margin: 0;
   padding: 0;
-  background-color: #FFFAFB;
+  background-color: #6b575b;
   color: #333;
   text-align: center;
   letter-spacing: 2px;
@@ -145,10 +145,12 @@ body {
 .aboutmeimg {
   display: block;
   margin-left: auto;
-  margin-right: 47%;
-  margin-top: -38%;
-  width: 37%;
+  margin-right: 57%;
+  margin-top: -34%;
+  width: 20%;
   animation: fadeIn 2s ease-in-out;
+  border-radius: 100px;
+  
 }
 
 
