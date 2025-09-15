@@ -92,7 +92,7 @@ body {
 
 .welcome {
   width: 15%;
-  margin-top: -105;
+  margin-top: -100;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -167,6 +167,13 @@ body {
   visibility: visible;
   animation: fadeIn 1.5s ease-in-out forwards;
 
+}
+
+.line {
+  margin-top: -2%;
+  width: 0%;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /*css for sections*/
