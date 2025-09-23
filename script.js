@@ -8,6 +8,11 @@
         }
       }
     }
+
+    // Initialization for ES Users
+
+
+
     
     // Toggle mobile menu
     const menuBtn = document.getElementById('menuBtn');
@@ -31,3 +36,5 @@
     }, { threshold: 0.3 });
 
     document.querySelectorAll(".fade-on-scroll").forEach(target => observer.observe(target));
+
+    
