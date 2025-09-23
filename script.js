@@ -1,16 +1,33 @@
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate");
-      observer.unobserve(entry.target); // stop observing/only do the animation once when its done
+ 
+ tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mincho: ['"BIZ UDPMincho"', 'serif']
+          }
+        }
+      }
     }
-  });
-}, {
-  threshold: 0.3 // this triggers when you see the amount of the element like 30% asof right now.
-});
+    
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
 
-// target elements to observe
-const targets = document.querySelectorAll(".fade-on-scroll");
-targets.forEach(target => {
-  observer.observe(target);
-});
+    // Fade-on-scroll from your original script
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll(".fade-on-scroll").forEach(target => observer.observe(target));

@@ -1,0 +1,14 @@
+
+    /* Preserve a few of your original micro-styles for look parity */
+    html { scroll-behavior: smooth; }
+    .fade-on-scroll { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-on-scroll.animate { opacity: 1; transform: none; }
+    /* Keep your decorative side images positioning */
+    .flowerleft { position: fixed; left: 0; top: 25%; width: 120px; opacity: .9; pointer-events: none; }
+    .flowerright { position: fixed; right: 0; top: 30%; width: 120px; opacity: .9; pointer-events: none; }
+    @media (max-width: 1024px) {
+      .flowerleft, .flowerright { display: none; }
+    }
+    .LastUpdated { display:block; margin: 4rem auto 0; max-width: 360px; width: 60%; }
+    /* Card image aspect helper */
+    .card-img { width: 100%; height: 200px; object-fit: cover; }

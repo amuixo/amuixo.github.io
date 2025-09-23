@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\angel\\.nuget\\packages\\": {}
+    "/Users/amuixo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\angel\\Documents\\foundations\\portfolio\\idk\\portfolio.csproj",
+      "projectUniqueName": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/portfolio.csproj",
       "projectName": "portfolio",
-      "projectPath": "C:\\Users\\angel\\Documents\\foundations\\portfolio\\idk\\portfolio.csproj",
-      "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\angel\\Documents\\foundations\\portfolio\\idk\\obj\\",
+      "projectPath": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/portfolio.csproj",
+      "packagesPath": "/Users/amuixo/.nuget/packages/",
+      "outputPath": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/amuixo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

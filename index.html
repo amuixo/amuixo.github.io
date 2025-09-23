@@ -1,138 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Angela's Portfolio</title>
-  <link href='https://fonts.googleapis.com/css?family=BIZ UDPMincho' rel='stylesheet'>
-  <link rel="stylesheet" href="./styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=BIZ%20UDPMincho" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+<body class="font-mincho text-black bg-white">
 
-
-<!-- tabs -->
-
-<body>
-
-  <div class="menu">
-    <div class="menu-item current-menu-item">
-      <a href="#home">Home</a>
+  <!-- Responsive Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-14">
+        <a href="#home" class="text-lg font-semibold tracking-wide">:3</a>
+        <button id="menuBtn" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 border" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="hidden lg:flex gap-6 text-sm font-semibold uppercase">
+          <a href="#home" class="hover:opacity-70">Home</a>
+          <a href="#about-me" class="hover:opacity-70">About Me</a>
+          <a href="#projects" class="hover:opacity-70">Projects</a>
+        </nav>
+      </div>
+      <!-- Mobile dropdown -->
+      <div id="mobileMenu" class="lg:hidden hidden pb-3">
+        <a href="#home" class="block py-2">Home</a>
+        <a href="#about-me" class="block py-2">About Me</a>
+        <a href="#projects" class="block py-2">Projects</a>
+      </div>
     </div>
-    <div class="menu-item">
-      <a href="#about-me">About Me</a>
-    </div>
-    <div class="menu-item">
-      <a href="#projects">Projects</a>
-    </div>
-    <div class="menu-item">
-      <a href="./contact.html">Contact</a>
-    </div>
+  </header>
 
-  </div>
+  <section id="home" class="relative">
+    <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="space-y-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Angela's Portfolio</h1>
+          <p class="text-lg/7">Welcome! I'm Angela, a 18-year-old student
+            passionate about game development. </p>
+            <p class="text-lg/7">Coding Languages: HTML, CSS, JS, C#, Lua, C++ (learning).</p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 hover:bg-gray-50">
+              <span>View Projects</span><i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 hover:bg-gray-50">
+              <span>Contact</span><i class="fa-regular fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="./images/snow.jpg" alt="Profile" class="w-full rounded-2xl shadow-md object-cover max-h-[520px]" draggable="false" />
+        </div>
+      </div>
+    </div>
+  </section>
+<img src="images/FlowerLeft.png" class="flowerleft" draggable="false" alt=""/>
+<img src="images/FlowerRight.png" class="flowerright" draggable="false" alt=""/>
 
-  <!-- sections home -->
-  <section id="home" class="fade-on-scroll">
-    <img src="./images/snow.jpg" alt="Angela's Profile Picture" class="profile-img" draggable="false">
-    <div style="height: 2em;"></div>
-    <img src="./images/welcome.png" class="welcome" draggable="false">
-    <div style="height: 0.5em;"></div>
-    <img src="./images/ToMy.png" alt="tomy" class="second-img" draggable="false">
-    <div style="height: 2em;"></div>
+<!-- Decorative line (responsive) -->
+<div class="mb-10">
+  <img src="./images/line.png" 
+       alt="divider line" 
+       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
+       draggable="false" />
+</div>
+
+<!-- About Me -->
+<section id="about-me" class="fade-on-scroll">
+  <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
     
-    <span>
-      Hi! I'm Angela, a 17-year-old student<br> passionate about software<br> development & <br> game development.<br>
-      <div style="margin-top: 2em;"></div>
-      <b>Coding Languages:</b> <br> HTML, CSS, JS, C#, Lua, C++ (learning)
-      <div style="margin-top: 2em;"></div>
-      <img src="./images/line.png" class="line" draggable="false">
-    </span>
-  </section>
 
-  <!-- side images -->
-  <img src="./images/FlowerLeft.png" class="flowerleft" draggable="false">
-  <br>
-  <img src="./images/FlowerRight.png" class="flowerright" draggable="false">
-  <!-- about me & images-->
-  <section id="about-me" class="fade-on-scroll">
 
-    <img src="./images/LifeJourney.png" alt="Additional Image" class="LifeJourney" draggable="false">
-    <div class="text-container">
-      <p class="text">
-        From an early age, I've always <br> spent time at the computer,<br> exploring new hobbies, leaving <br> me keen
-        to learn. This pursuit <br> taught me English, fluency in <br> which has proved invaluable.
-        <br><br>
-        My father shared with me his <br> passion for coding and <br> technology, introducing me to <br> the world of
-        computers and even <br> helping me build my first. He has <br> taught me much of what I know <br> today, with
-        him guiding my <br> interest towards software <br>development.
-      </p>
+<!-- Grid for About Me text + second image -->
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">About Me</h2>
+        <p class="text-base/7"></p>
 
-      <img src="./images/mirrorpic.jpg" alt="Additional Image" class="aboutmeimg" draggable="false">
+I've been fascinated by the design and functionality of video games since I was young, and getting older has
+only made me dive deeper to pursue my passion in game development.
+As a student of software development, I'm working towards one day working at Riot Games.
 
+        </p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><b>Interests:</b> Learning new things, exploring game designing, getting to work with nice people </li>
+          <li><b>Cons:</b> Reliable, eager to learn, love working with people, hardworking and a passion for games :) </li>
+        </ul>
+      </div>
+      <div>
+        <img src="images/aboutmeimg.png" 
+             alt="" 
+             class="rounded-xl w-full max-w-md mx-auto h-auto" 
+             draggable="false" />
+      </div>
     </div>
-    <br>
-    <div class="text-container">
-      <p class="texttwo">
-        I've been fascinated by the design and functionality of websites and <br> video games for as long as I can
-        remember, and getting older has <br> only made me dive deeper to pursue my passion in software development.
-        <br><br> Besides coding, I enjoy spending time at the gym, gaming, listening to music, or traveling.
-      </p>
-    </div>
-  </section>
+    
+  </div>
+</section>
 
+  <!-- Decorative line (responsive) -->
+<div class="mb-10">
+  <img src="./images/line.png" 
+       alt="divider line" 
+       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
+       draggable="false" />
+</div>
 
-  <!-- projects section -->
-  <img src="./images/projects.png" class="projectsword" draggable="false">
+  <!-- Projects -->
   <section id="projects" class="fade-on-scroll">
-
-    <main>
-      <!-- projects card 1  -->
-      <a href="./cards/ideas.html" class="card card-link">
-        <img src="./images/kimidesign.png" alt="Nature Image" draggable="false">
-        <div class="card-content">
-          <h2>Concepts</h2>
-          <p>just game ideas or website designs that ive thought of.</p>
-        </div>
-      </a>
-
-      <!-- card 2 -->
-      <div class="card">
-        <img src="./images/WarCat.jpg" alt="Technology Image" draggable="false">
-        <div class="card-content">
-          <h2>School</h2>
-          <p>all of my school</p>
-          <a href="#" class="button">
-            Learn More
-            <span class="material-symbols-outlined">arrow_right_alt</span>
-          </a>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
+      <div class="flex items-end justify-between mb-6">
+        <h2 class="text-2xl sm:text-3xl font-bold">Projects</h2>
+        <a href="cards/ideas.html" class="text-sm underline hover:no-underline">All Projects</a>
       </div>
-
-      <!-- card 3 -->
-      <div class="card">
-        <img src="./images/WarCat.jpg" alt="Travel Image" draggable="false">
-        <div class="card-content">
-          <h2>Portfolios</h2>
-          <p>These are portfolios I've made for people.</p>
-          <a href="#" class="button">
-            Start Exploring
-            <span class="material-symbols-outlined">arrow_right_alt</span>
-          </a>
-        </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="./images/2Dgame.png" alt="Project image" class="card-img" draggable="false">
+          <div class="p-5 space-y-2">
+            <h3 class="text-lg font-semibold">2D pixelart game</h3>
+            <p class="text-sm/6">This is my own little project, I made it to practice Unity and C#.</p>
+            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/WarCat.jpg" alt="Project image" class="card-img" draggable="false">
+          <div class="p-5 space-y-2">
+            <h3 class="text-lg font-semibold">OOP game</h3>
+            <p class="text-sm/6">This is a text based game made with C#. It was a school project.</p>
+            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="./images/kimidesign.png" alt="Project image" class="card-img" draggable="false">
+          <div class="p-5 space-y-2">
+            <h3 class="text-lg font-semibold">Concepts</h3>
+            <p class="text-sm/6">This page is just a showcase of my concepts and ideas for games.</p>
+            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
       </div>
-    </main>
+    </div>
   </section>
 
-  <!--  bottom image -->
-  <img src="./images/LastUpdated.png" class="LastUpdated" draggable="false">
+  <!-- Decorative line (responsive) -->
+<div class="mb-10">
+  <img src="./images/line.png" 
+       alt="divider line" 
+       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
+       draggable="false" />
+</div>
 
-  <div style="height: 120px;"></div>
+<!-- Contact Form -->
+<section id="contact" class="fade-on-scroll">
+  <div class="max-w-3xl mx-auto px-4 py-12 lg:py-20">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Contact Me</h2>
+
+    <form action="https://formspree.io/f/mblzjldz" method="POST" 
+          class="space-y-6 bg-white border rounded-2xl shadow-sm p-8">
+      
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+        <input type="email" id="email" name="email" required
+               class="w-full rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400 transition" />
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
+        <textarea id="message" name="message" rows="5" required
+                  class="w-full rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400 transition"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+              class="w-full rounded-xl bg-black text-white font-semibold py-3 hover:bg-gray-800 transition">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<img src="images/LastUpdated.png" 
+     alt="Last updated"
+     class="block mx-auto w-full max-w-4xl h-auto mb-20" 
+     draggable="false" />
 
   <script src="script.js"></script>
 
 </body>
-
 </html>
