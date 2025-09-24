@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/amuixo/.nuget/packages/": {}
+    "C:\\Users\\Angela\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/portfolio.csproj",
+      "projectUniqueName": "C:\\Users\\Angela\\Documents\\amuixo.github.io\\idk\\portfolio.csproj",
       "projectName": "portfolio",
-      "projectPath": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/portfolio.csproj",
-      "packagesPath": "/Users/amuixo/.nuget/packages/",
-      "outputPath": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/obj/",
+      "projectPath": "C:\\Users\\Angela\\Documents\\amuixo.github.io\\idk\\portfolio.csproj",
+      "packagesPath": "C:\\Users\\Angela\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Angela\\Documents\\amuixo.github.io\\idk\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/amuixo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Angela\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -42,8 +42,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -59,12 +60,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.11, 8.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.414/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

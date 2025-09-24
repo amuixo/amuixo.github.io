@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Os4kEQW9DuM=",
+  "dgSpecHash": "HXJ5DMRTUy0=",
   "success": true,
-  "projectFilePath": "/Users/amuixo/Documents/GitHub/amuixo.github.io/idk/portfolio.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Angela\\Documents\\amuixo.github.io\\idk\\portfolio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angela\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Angela\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Angela\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\Angela\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

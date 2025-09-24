@@ -1,261 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Angela's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
- 
-
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=BIZ%20UDPMincho" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to Angela's portfolio. Explore creative game projects and development work.">
+    <meta name="author" content="Angela Davids">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Angela Davids - Game Developer</title>
 </head>
-<body class="font-mincho text-black bg-white">
+<body class="bg-[#0d0d0d] font-[urbanist] text-white">
 
-  <!-- Responsive Navbar -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex items-center justify-between h-14">
-        <a href="#home" class="text-lg font-semibold tracking-wide">Angela</a>
-        <button id="menuBtn" class="lg:hidden inline-flex items-center justify-center rounded-md p-2 border" aria-label="Open menu" aria-expanded="false">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav class="hidden lg:flex gap-6 text-sm font-semibold uppercase">
-          <a href="#home" class="hover:opacity-70">Home</a>
-          <a href="#about-me" class="hover:opacity-70">About Me</a>
-          <a href="#projects" class="hover:opacity-70">Projects</a>
+    <!--NAVBAR-->
+    <div class="sticky top-0 z-10">
+        <nav class="flex justify-between items-center text-white px-20 py-3 relative">
+            <!-- Hamburger / Close icon -->
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="links text-xl gap-15 flex items-center text-xl" id="navLinks">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
-      </div>
-      <!-- Mobile dropdown -->
-      <div id="mobileMenu" class="lg:hidden hidden pb-3">
-        <a href="#home" class="block py-2">Home</a>
-        <a href="#about-me" class="block py-2">About Me</a>
-        <a href="#projects" class="block py-2">Projects</a>
-      </div>
     </div>
-  </header>
 
-  <section id="home" class="relative">
-    <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div class="space-y-6">
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">Welcome!</h1>
-          <p class="text-lg/7">I'm Angela, a 18-year-old student
-            passionate about game development. </p>
-            <p class="text-lg/7">Coding Languages: HTML, CSS, JS, C#, Lua, C++ (learning).</p>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="#projects" class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 hover:bg-gray-50">
-              <span>View Projects</span><i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border px-4 py-2 hover:bg-gray-50">
-              <span>Contact</span><i class="fa-regular fa-paper-plane"></i>
-            </a>
-          </div>
+    <!-- Decorative Side Elements -->
+    <div class="fixed left-4 top-1/4 z-0 opacity-30 pointer-events-none hidden lg:block decorative-lines" id="leftLines">
+        <div class="flex flex-col gap-8">
+            <div class="w-2 h-16 bg-[#AA9F8B] rounded-full"></div>
+            <div class="w-1 h-8 bg-[#79747E] rounded-full ml-2"></div>
+            <div class="w-3 h-12 bg-[#AA9F8B] rounded-full"></div>
+            <div class="w-1 h-6 bg-[#79747E] rounded-full ml-3"></div>
         </div>
-        <div class="relative">
-          <img src="./images/snow.jpg" alt="Profile" class="w-full rounded-2xl shadow-md object-cover max-h-[520px]" draggable="false" />
-        </div>
-      </div>
-    </div>
-  </section>
-<img src="images/FlowerLeft.png" class="flowerleft" draggable="false" alt=""/>
-<img src="images/FlowerRight.png" class="flowerright" draggable="false" alt=""/>
-
-<!-- Decorative line (responsive) -->
-<div class="mb-10">
-  <img src="./images/line.png" 
-       alt="divider line" 
-       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
-       draggable="false" />
-</div>
-
-<!-- About Me -->
-<section id="about-me" class="fade-on-scroll">
-  <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
-    
-
-
-<!-- Grid for About Me text + second image -->
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
-      <div class="space-y-4">
-        <h2 class="text-2xl sm:text-3xl font-bold">About Me</h2>
-        <p class="text-base/7"></p>
-
-I've been fascinated by the design and functionality of video games since I was young, and getting older has
-only made me dive deeper to pursue my passion in game development.
-As a student of software development, I'm working towards a working forRiot Games.
-
-        </p>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><b>Interests:</b> Learning new things, exploring game designing, getting to work with nice people </li>
-          <li><b>Skills:</b> Reliable, eager to learn, creative, hardworking and a passion for games :) </li>
-        </ul>
-      </div>
-      <div>
-        <img src="images/aboutmeimg.png" 
-             alt="" 
-             class="rounded-xl w-full max-w-md mx-auto h-auto" 
-             draggable="false" />
-      </div>
     </div>
     
-  </div>
-</section>
-
-  <!-- Decorative line (responsive) -->
-<div class="mb-10">
-  <img src="./images/line.png" 
-       alt="divider line" 
-       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
-       draggable="false" />
-</div>
-
-  <!-- Projects -->
-  <section id="projects" class="fade-on-scroll">
-    <div class="max-w-6xl mx-auto px-4 py-12 lg:py-20">
-      <div class="flex items-end justify-between mb-6">
-        <h2 class="text-2xl sm:text-3xl font-bold">Projects</h2>
-        <a href="cards/ideas.html" class="text-sm underline hover:no-underline">All Projects</a>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
-          <img src="./images/2Dgame.png" alt="Project image" class="card-img" draggable="false">
-          <div class="p-5 space-y-2">
-            <h3 class="text-lg font-semibold">2D pixelart game</h3>
-            <p class="text-sm/6">This is my own little project, I made it to practice Unity and C#.</p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Card 2 -->
-        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
-          <img src="./images/OOPss.png" alt="Project image" class="card-img" draggable="false">
-          <div class="p-5 space-y-2">
-            <h3 class="text-lg font-semibold">OOP game</h3>
-            <p class="text-sm/6">This is a text based game made with C#. It was a school project.</p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Card 3 -->
-        <article class="rounded-2xl border overflow-hidden shadow-sm hover:shadow-md transition">
-          <img src="./images/kimidesign.png" alt="Project image" class="card-img" draggable="false">
-          <div class="p-5 space-y-2">
-            <h3 class="text-lg font-semibold">Concepts</h3>
-            <p class="text-sm/6">This page is just a showcase of my concepts and ideas for games.</p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm underline hover:no-underline">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </article>
-      </div>
+    <div class="fixed right-4 top-1/3 z-0 opacity-30 pointer-events-none hidden lg:block decorative-lines" id="rightLines">
+        <div class="flex flex-col gap-6">
+            <div class="w-4 h-20 bg-[#AA9F8B] rounded-full"></div>
+            <div class="w-1 h-10 bg-[#79747E] rounded-full mr-2"></div>
+            <div class="w-2 h-14 bg-[#AA9F8B] rounded-full mr-1"></div>
+        </div>
     </div>
-  </section>
+    
 
-  <!-- Decorative line (responsive) -->
-<section id="contact" class="fade-on-scroll"></section>
-<div class="mb-10">
-  <img src="./images/line.png" 
-       alt="divider line" 
-       class="w-full max-w-2xl mx-auto h-auto opacity-80" 
-       draggable="false" />
-</div>
-</section>
+    <!--INTRODUCTION-->
+    <div class="intro flex flex-col items-center justify-center pt-13 introres relative z-10">
+        <div class="flex-col flex justify-center items-center">
+            <img class="w-50 rounded-[130px] border-2 border-[#AA9F8B]" src="./images/snow.jpg" alt="Angela's Profile">
 
-<!-- Socials -->
- <div class="flex justify-center items-center">
+            <div class="text-center flex-col flex justify-center items-center font-[urbanist]">
+                <div class="slider-container mt-5">
+                    <div class="slider-wrapper text-[#333]">
+                        <div class="text-center text-2xl font-medium slider-text">Game Developer</div>
+                        <div class="text-center text-2xl font-medium slider-text">Unity Enthusiast</div>
+                        <div class="text-center text-2xl font-medium slider-text">Creative Coder</div>
+                        <div class="text-center text-2xl font-medium slider-text">Future Riot Games Dev</div>
+                    </div>
+                </div>
 
-<!-- Discord -->
-<button
-  type="button"
-  data-twe-ripple-init
-  data-twe-ripple-color="light"
-  class="mb-2 inline-block rounded bg-[#7289da] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-  <span class="[&>svg]:h-4 [&>svg]:w-4">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 640 512">
-      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-      <path
-        d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
-    </svg>
-  </span>
-</button>
+                <h1 class="text-[#AA9F8B] text-5xl font-bold font-[urbanist] mt-3 typing-effect">Angela Davids</h1>
+                <i class="fa-solid fa-location-dot text-[#79747E] py-3"><span
+                        class="font-extralight px-2 text-lg font-[urbanist] text-[#79747E]">Netherlands - 050</span></i>
+                
+                <div class="text-center mt-4 max-w-md">
+                    <p class="text-[#79747E] text-lg font-light leading-relaxed fade-in-up">
+                        Passionate about creating immersive gaming experiences and bringing digital worlds to life through code.
+                    </p>
+                </div>
+                
+                <!-- Interactive Skills Tags -->
+                <div class="flex flex-wrap gap-3 mt-6 justify-center">
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Lua</span>
+                    <span class="skill-tag">Game Design</span>
+                    <span class="skill-tag">C++ <span class="text-xs opacity-70">(learning)</span></span>
+                </div>
+            </div>
 
-<!-- Github -->
-<button
-  type="button"
-  data-twe-ripple-init
-  data-twe-ripple-color="light"
-  class="mb-2 inline-block rounded bg-[#333] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-  <span class="[&>svg]:h-4 [&>svg]:w-4">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 496 512">
-      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-      <path
-        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-    </svg>
-  </span>
-</button>
+            <div class="flex items-center social gap-7 mt-6">
+                <a href="https://discord.com/users/your-discord-id"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://github.com/amuixo"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/your-linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
 
-<!-- Linkedin -->
-<button
-  type="button"
-  data-twe-ripple-init
-  data-twe-ripple-color="light"
-  class="mb-2 inline-block rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-  <span class="[&>svg]:h-4 [&>svg]:w-4">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="currentColor"
-      viewBox="0 0 448 512">
-      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. -->
-      <path
-        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
-    </svg>
-  </span>
-</button>
+        <div class="main__action mt-8">
+            <a class="main__scroll" href="#about">
+                <div class="main__scroll-box">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path
+                            d="M11.9997 13.1716L7.04996 8.22186L5.63574 9.63607L11.9997 16L18.3637 9.63607L16.9495 8.22186L11.9997 13.1716Z"
+                            fill="rgba(232,232,232,1)">
+                        </path>
+                    </svg>
+                </div>
+                <span class="main__scroll-text">Scroll</span>
+            </a>
+        </div>
 
- </div>
-<!-- Contact Form -->
-<section id="contact1" class="fade-on-scroll">
-  <div class="max-w-3xl mx-auto px-4 py-12 lg:py-20">
-    <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <!--ABOUT SECTION-->
+        <div class="pt-40 flex items-center justify-center max-w-150 aboutres" id="about">
+            <div class="flex flex-col items-left justify-center font-[urbanist] relative">
+                <div class="absolute -left-4 top-0 w-1 h-32 bg-gradient-to-b from-[#AA9F8B] to-transparent rounded-full scrolll"></div>
+                <h1 class="text-[#AA9F8B] text-2xl font-bold pb-7 scrolll flex items-center gap-2">
+                    ABOUT <span class="text-sm opacity-70 ml-2 text-[#79747E]">&mdash; who I am</span>
+                </h1>
+                <div class="flex items-center justify-center aboutbutton aboutres">
+                    <h2 class="text-[#333] font-semibold text-2xl max-w-150 scrolll leading-relaxed">
+                        I've been fascinated by the design and functionality of video games since I was young, and getting older has
+                        only made me dive deeper to pursue my passion in game development. 
+                        <br><br>
+                        <span class="text-[#79747E]">I'm Angela</span>, an 18-year-old student working towards my dream of joining Riot Games.
+                        I believe great design isn't just about looks—it's about how it makes players feel.
+                        <br><br>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <span class="text-[#AA9F8B] font-semibold">
+                                    Skills:
+                                </span> 
+                                <span class="text-[#79747E] block mt-1">HTML, CSS, JS, C#, Lua, C++ (learning)</span>
+                            </div>
+                            <div>
+                                <span class="text-[#AA9F8B] font-semibold">
+                                    Interests:
+                                </span> 
+                                <span class="text-[#79747E] block mt-1">Game design, learning new technologies, creative collaboration</span>
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+            </div>
+        </div>
 
-    <form action="https://formspree.io/f/mblzjldz" method="POST" 
-          class="space-y-6 bg-white border rounded-2xl shadow-sm p-8">
-      
-      <!-- Email -->
-      <div>
-        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
-        <input type="email" id="email" name="email" required
-               class="w-full rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400 transition" />
-      </div>
+        <!--PROJECTS section-->
+        <div class="pt-50 flex items-center justify-center max-w-150 projectresponsive" id="projects">
+            <div class="flex flex-col items-left justify-center font-[urbanist] projectresponsive">
+                <h1 class="text-[#AA9F8B] text-2xl font-bold pb-7 scrolll">PROJECTS</h1>
 
-      <!-- Message -->
-      <div>
-        <label for="message" class="block text-sm font-medium mb-2">Your Message</label>
-        <textarea id="message" name="message" rows="5" required
-                  class="w-full rounded-xl border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-400 transition"></textarea>
-      </div>
+                <div class="max-w-150 overflow-hidden scrolll">
+                    <div class="whitespace-nowrap flex shrink-0 tracker" id="track">
+                        <img src="images/2Dgame.png" alt="2D Game Project" class="w-100 h-60 object-cover shrink-0 rounded-lg">
+                        <img src="images/OOPss.png" alt="OOP Game Project" class="w-100 h-60 object-cover shrink-0 rounded-lg">
+                        <img src="images/kimidesign.png" alt="Game Concepts" class="w-100 h-60 object-cover shrink-0 rounded-lg">
+                        <img src="images/2Dgame.png" alt="Additional Project" class="w-100 h-60 object-cover shrink-0 rounded-lg">
+                        <img src="images/OOPss.png" alt="More Projects" class="w-100 h-60 object-cover shrink-0 rounded-lg">
+                    </div>
+                </div>
 
-      <!-- Submit -->
-      <button type="submit"
-              class="w-full rounded-xl bg-black text-white font-semibold py-3 hover:bg-gray-800 transition">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
+                <div class="text-[#333] text-2xl mt-7 scrolll font-semibold projectt">
+                    <h3>I bring ideas to life through design and code. Explore a selection of my favorite projects —
+                        built with creativity, precision, and care.</h3>
+                </div>
 
-<img src="images/LastUpdated.png" 
-     alt="Last updated"
-     class="block mx-auto w-full max-w-4xl h-auto mb-20" 
-     draggable="false" />
+                <div class="aboutbutton mt-5 scrolll">
+                    <a href="./projects.html">View Projects →</a>
+                </div>
+            </div>
+        </div>
 
-  <script src="script.js"></script>
+        <!--footer-->
+        <footer class="flex items-center justify-center mt-30" id="contact">
+            <div class="py-15 max-w-4xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h1 class="text-[#AA9F8B] text-4xl font-bold mb-4 scrolll">Let's Create Something Amazing</h1>
+                    <p class="text-[#79747E] text-lg max-w-2xl mx-auto scrolll">Ready to bring your game ideas to life or collaborate on exciting projects? I'd love to hear from you!</p>
+                </div>
 
+                <!-- Contact Cards -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Email Card -->
+                    <div class="contact-card scrolll">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[#AA9F8B] font-semibold text-lg">Email Me</h3>
+                                <p class="text-[#79747E] text-sm">For project inquiries & collaborations</p>
+                            </div>
+                        </div>
+                        <a href="mailto:Angela.c.davids@gmail.com" class="text-white hover:text-[#AA9F8B] transition font-mono">
+                            Angela.c.davids@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- Social Card -->
+                    <div class="contact-card scrolll">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-[#AA9F8B] font-semibold text-lg">Connect</h3>
+                                <p class="text-[#79747E] text-sm">Let's connect on social platforms</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center social gap-4">
+                            <a href="https://discord.com/users/your-discord-id" class="social-modern" title="Discord">
+                                <i class="fa-brands fa-discord"></i>
+                            </a>
+                            <a href="https://github.com/amuixo" class="social-modern" title="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/your-linkedin" class="social-modern" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="text-center border-t border-[#333] pt-8 scrolll">
+                    <div class="flex flex-wrap justify-center gap-8 text-sm text-[#79747E]">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-[#AA9F8B]"></i>
+                            <span>Usually responds within 24 hours</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-coffee text-[#AA9F8B]"></i>
+                            <span>Always up for game dev discussions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>
