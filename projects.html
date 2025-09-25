@@ -19,26 +19,6 @@
 
 <body class="bg-[#0d0d0d] font-[urbanist] text-white">
 
-    <!--NAVBAR-->
-    <div class="sticky top-0 z-10">
-        <nav class="flex justify-between items-center text-white px-20 py-3 relative">
-            <!-- Hamburger / Close icon -->
-            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="links text-xl gap-15 flex items-center text-xl" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
-        </nav>
-    </div>
-
     <!-- Decorative Side Elements -->
     <div class="fixed left-4 top-1/4 z-0 opacity-30 pointer-events-none hidden lg:block decorative-lines" id="leftLines">
         <div class="flex flex-col gap-8">
@@ -213,15 +193,11 @@
 
             </div>
 
-            <!--BACK TO HOME-->
-            <div class="text-center mt-12 mb-16 scrolll">
-                <div class="bg-[#333] bg-opacity-20 backdrop-blur-sm border border-[#AA9F8B] border-opacity-30 rounded-lg p-5 max-w-xs mx-auto">
-                    <a href="index.html" class="inline-flex items-center gap-2 bg-[#AA9F8B] text-black px-6 py-2 rounded-lg font-medium hover:bg-[#B8A891] transition transform hover:-translate-y-1">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        Back to Home
-                    </a>
-                </div>
-            </div>
+<!--BACK TO HOME-->
+        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+            <a href="index.html" class="text-[#B3B3B3] hover:text-[#AA9F8B] transition flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
 
         </div>
     </div>
