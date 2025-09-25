@@ -1,5 +1,6 @@
-// Angela's Portfolio - Esraa's Animation System with Sakura Theme
+// Angela's Portfolio JavaScript - Simple & Clean
 
+// Text slider animation
 document.addEventListener("DOMContentLoaded", () => {
   const sliderWrapper = document.querySelector(".slider-wrapper");
   const texts = document.querySelectorAll(".slider-text");
@@ -15,41 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-let lastScrollY = window.scrollY;
-
-// Restore visible elements from localStorage on page load
-document.querySelectorAll('.scrolll').forEach((el, index) => {
-  const wasVisible = localStorage.getItem(`scrolll-visible-${index}`);
-  if (wasVisible === 'true') {
-    el.classList.add('show');
-    el.classList.remove('hide');
-  }
-});
-
+// Scroll animations - keep it simple like original but remove localStorage
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
-    const el = entry.target;
-
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      if (window.scrollY > lastScrollY) {
-        el.classList.add('show');
-        el.classList.remove('hide');
-
-        const idx = Array.from(document.querySelectorAll('.scrolll')).indexOf(el);
-        localStorage.setItem(`scrolll-visible-${idx}`, 'true');
-      }
-    } else {
-      if (window.scrollY < lastScrollY) {
-        el.classList.remove('show');
-        el.classList.add('hide');
-
-        const idx = Array.from(document.querySelectorAll('.scrolll')).indexOf(el);
-        localStorage.removeItem(`scrolll-visible-${idx}`);
-      }
+      entry.target.classList.add('show');
     }
   });
-
-  lastScrollY = window.scrollY;
 }, {
   root: null,
   rootMargin: '0px 0px -20% 0px',
@@ -60,9 +33,10 @@ document.querySelectorAll('.scrolll').forEach(el => {
   observer.observe(el);
 });
 
+// Image gallery animation
 window.addEventListener('load', () => {
-  const SPEED = 60;
   const track = document.getElementById('track');
+  if (!track) return;
 
   const loopWidth = track.scrollWidth;
   track.appendChild(track.cloneNode(true));
@@ -76,33 +50,31 @@ window.addEventListener('load', () => {
   `;
   document.head.appendChild(style);
 
-  const duration = loopWidth / SPEED;
+  const duration = loopWidth / 60;
   track.style.animation = `marquee-right ${duration}s linear infinite`;
 });
 
-const hamburger = document.getElementById('hamburger');
-const links = document.querySelector('.links');
+// Mobile menu removed as requested
 
-hamburger.addEventListener('click', () => {
-  const isOpen = links.classList.contains('show');
+// FIXED: Navbar scroll behavior - simple
+let lastScroll = 0;
+const nav = document.querySelector('nav');
 
-  if (isOpen) {
-    links.classList.remove('show');
-    links.classList.add('fadeout');
-    hamburger.classList.remove('open');
-
-    setTimeout(() => {
-      links.style.display = 'none';
-      links.classList.remove('fadeout');
-    }, 500);
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+  
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    // Scrolling down - hide navbar
+    nav.style.transform = 'translateY(-100%)';
   } else {
-    links.style.display = 'flex';
-    links.classList.add('show');
-    hamburger.classList.add('open');
+    // Scrolling up - show navbar  
+    nav.style.transform = 'translateY(0)';
   }
+  
+  lastScroll = currentScroll;
 });
 
-// Scroll effects for decorative lines
+// Decorative lines scroll effect - keep original
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
   const leftLines = document.getElementById('leftLines');
