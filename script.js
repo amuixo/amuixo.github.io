@@ -54,25 +54,54 @@ window.addEventListener('load', () => {
   track.style.animation = `marquee-right ${duration}s linear infinite`;
 });
 
-// Mobile menu removed as requested
+// Mobile hamburger menu - fixed and simple
+const hamburger = document.getElementById('hamburger');
+const links = document.querySelector('.links');
 
-// FIXED: Navbar scroll behavior - simple
+if (hamburger && links) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = links.classList.contains('show');
+
+    if (isOpen) {
+      // Close menu
+      links.classList.remove('show');
+      links.classList.add('fadeout');
+      hamburger.classList.remove('open');
+      
+      setTimeout(() => {
+        links.style.display = 'none';
+        links.classList.remove('fadeout');
+      }, 500);
+    } else {
+      // Open menu
+      links.style.display = 'flex';
+      links.classList.add('show');
+      hamburger.classList.add('open');
+    }
+  });
+}
+
+// Navbar hide/show on scroll - fixed
 let lastScroll = 0;
 const nav = document.querySelector('nav');
 
-window.addEventListener('scroll', () => {
-  const currentScroll = window.scrollY;
-  
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    // Scrolling down - hide navbar
-    nav.style.transform = 'translateY(-100%)';
-  } else {
-    // Scrolling up - show navbar  
-    nav.style.transform = 'translateY(0)';
-  }
-  
-  lastScroll = currentScroll;
-});
+if (nav) {
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    
+    if (currentScroll > lastScroll && currentScroll > 80) {
+      // Scrolling down - hide navbar
+      nav.style.transform = 'translateY(-100%)';
+      nav.style.transition = 'transform 0.3s ease';
+    } else {
+      // Scrolling up - show navbar  
+      nav.style.transform = 'translateY(0)';
+      nav.style.transition = 'transform 0.3s ease';
+    }
+    
+    lastScroll = currentScroll;
+  });
+}
 
 // Decorative lines scroll effect - keep original
 window.addEventListener('scroll', () => {
